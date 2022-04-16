@@ -1,1 +1,1 @@
-# weather-app
+# Vanilla JavaScript Weather App
