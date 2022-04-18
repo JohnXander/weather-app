@@ -23,6 +23,7 @@ input {
     font-family: inherit;
     box-shadow: 0 4px rgba(0, 0, 0, 0.2);
     min-width: 300px;
+    font-size: 1rem;
 }
 
 input:focus {

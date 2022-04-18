@@ -14,6 +14,8 @@ async function getWeatherByLocation(city) {
     });
     const respData = await resp.json();
 
+    console.log(respData);
+
     addWeatherToPage(respData);
 }
 
@@ -24,8 +26,12 @@ function addWeatherToPage(data) {
     weather.classList.add("weather");
 
     weather.innerHTML = `
-        <h2><img src="https://openweathermap.org/img/wn/${data.weather[0].icon}.png"/>
-        ${temp}°C</h2>
+        <h2>
+            <img src="https://openweathermap.org/img/wn/${data.weather[0].icon}.png" />
+              ${temp}°C  
+            <img src="https://openweathermap.org/img/wn/${data.weather[0].icon}.png" />
+        </h2>
+        <small>${data.weather[0].main}</small>
     `;
 
     // clean up
@@ -36,7 +42,7 @@ function addWeatherToPage(data) {
 }
 
 function KtoC(K) {
-    return (K - 273.15).toFixed(2);
+    return Math.floor(K - 273.15);
 }
 
 form.addEventListener("submit", (e) => {
