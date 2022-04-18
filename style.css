@@ -43,4 +43,6 @@ input:focus {
 
 .weather img {
     transform: scale(2);
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
