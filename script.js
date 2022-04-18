@@ -24,9 +24,8 @@ function addWeatherToPage(data) {
     weather.classList.add("weather");
 
     weather.innerHTML = `
-        <small>It is </small>
-        <h2>${temp}°C</h2>
-        <p>in ${search.value}</p>
+        <h2><img src="https://openweathermap.org/img/wn/${data.weather[0].icon}.png"/>
+        ${temp}°C</h2>
     `;
 
     // clean up
